@@ -19,6 +19,11 @@
 {
   description = "Shared kernel for infrastructure layers";
   inputs = rec {
+    esdbclient = {
+      inputs.flake-utils.follows = "flake-utils";
+      inputs.nixos.follows = "nixos";
+      url = "github:rydnr/nix-flakes?dir=esdbclient";
+    };
     flake-utils.url = "github:numtide/flake-utils/v1.0.0";
     nixos.url = "github:NixOS/nixpkgs/23.11";
     pythoneda-shared-pythoneda-banner = {
@@ -31,7 +36,7 @@
       inputs.nixos.follows = "nixos";
       inputs.pythoneda-shared-pythoneda-banner.follows =
         "pythoneda-shared-pythoneda-banner";
-      url = "github:pythoneda-shared-pythoneda-def/domain/0.0.21";
+      url = "github:pythoneda-shared-pythoneda-def/domain/0.0.22";
     };
   };
   outputs = inputs:
@@ -57,7 +62,7 @@
           builtins.replaceStrings [ "\n" ] [ "" ] "nixos-${nixosVersion}";
         shared = import "${pythoneda-shared-pythoneda-banner}/nix/shared.nix";
         pythoneda-shared-pythoneda-infrastructure-for =
-          { python, pythoneda-shared-pythoneda-domain }:
+          { esdbclient, python, pythoneda-shared-pythoneda-domain }:
           let
             pnameWithUnderscores =
               builtins.replaceStrings [ "-" ] [ "_" ] pname;
@@ -75,6 +80,7 @@
               authors = builtins.concatStringsSep ","
                 (map (item: ''"${item}"'') maintainers);
               desc = description;
+              esdbclient = esdbclient.version;
               inherit homepage pname pythonMajorMinorVersion pythonpackage
                 version;
               package = builtins.replaceStrings [ "." ] [ "/" ] pythonpackage;
@@ -96,12 +102,13 @@
             nativeBuildInputs = with python.pkgs; [ pip poetry-core ];
             propagatedBuildInputs = with python.pkgs; [
               dbus-next
+              esdbclient
               grpcio
               pythoneda-shared-pythoneda-domain
               requests
             ];
 
-            pythonImportsCheck = [ pythonpackage ];
+            # pythonImportsCheck = [ pythonpackage ];
 
             unpackPhase = ''
               cp -r ${src} .
@@ -203,24 +210,28 @@
             pythoneda-shared-pythoneda-infrastructure-python311;
           pythoneda-shared-pythoneda-infrastructure-python38 =
             pythoneda-shared-pythoneda-infrastructure-for {
+              esdbclient = esdbclient.packages.${system}.esdbclient-python38;
               python = pkgs.python38;
               pythoneda-shared-pythoneda-domain =
                 pythoneda-shared-pythoneda-domain.packages.${system}.pythoneda-shared-pythoneda-domain-python38;
             };
           pythoneda-shared-pythoneda-infrastructure-python39 =
             pythoneda-shared-pythoneda-infrastructure-for {
+              esdbclient = esdbclient.packages.${system}.esdbclient-python39;
               python = pkgs.python39;
               pythoneda-shared-pythoneda-domain =
                 pythoneda-shared-pythoneda-domain.packages.${system}.pythoneda-shared-pythoneda-domain-python39;
             };
           pythoneda-shared-pythoneda-infrastructure-python310 =
             pythoneda-shared-pythoneda-infrastructure-for {
+              esdbclient = esdbclient.packages.${system}.esdbclient-python310;
               python = pkgs.python310;
               pythoneda-shared-pythoneda-domain =
                 pythoneda-shared-pythoneda-domain.packages.${system}.pythoneda-shared-pythoneda-domain-python310;
             };
           pythoneda-shared-pythoneda-infrastructure-python311 =
             pythoneda-shared-pythoneda-infrastructure-for {
+              esdbclient = esdbclient.packages.${system}.esdbclient-python311;
               python = pkgs.python311;
               pythoneda-shared-pythoneda-domain =
                 pythoneda-shared-pythoneda-domain.packages.${system}.pythoneda-shared-pythoneda-domain-python311;

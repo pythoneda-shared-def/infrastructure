@@ -27,6 +27,7 @@ packages = [{include = "@package@"}]
 
 [tool.poetry.dependencies]
 dbus-next = "^@dbusNextVersion@"
+esdbclient = "^@esdbclient@"
 grpcio = "^@grpcioVersion@"
 python = "^@pythonMajorMinorVersion@"
 pythoneda-shared-pythoneda-domain = "^@pythonedaSharedPythonedaDomainVersion@"

@@ -1,5 +1,30 @@
 {
   "nodes": {
+    "esdbclient": {
+      "inputs": {
+        "flake-utils": [
+          "flake-utils"
+        ],
+        "nixos": [
+          "nixos"
+        ]
+      },
+      "locked": {
+        "dir": "esdbclient",
+        "lastModified": 1704916821,
+        "narHash": "sha256-hyojfile5zbJMmKs7Egq2m9cmuRdZuq6j4qQ9mN5y7s=",
+        "owner": "rydnr",
+        "repo": "nix-flakes",
+        "rev": "20cb6c228e12a689c0fc9776b7aecb8b4528fbbe",
+        "type": "github"
+      },
+      "original": {
+        "dir": "esdbclient",
+        "owner": "rydnr",
+        "repo": "nix-flakes",
+        "type": "github"
+      }
+    },
     "flake-utils": {
       "locked": {
         "lastModified": 1652776076,
@@ -69,22 +94,23 @@
         ]
       },
       "locked": {
-        "lastModified": 1705000518,
-        "narHash": "sha256-bhPoxuMHddCX+QCaMzs0LZ3udfeBRrj4G+eP67hFn1I=",
+        "lastModified": 1705047565,
+        "narHash": "sha256-90MhuGqyrW5PHz8O+ZjFqJwkxTArTQd8Lvfxz2AkDLw=",
         "owner": "pythoneda-shared-pythoneda-def",
         "repo": "domain",
-        "rev": "311ed3abfa13dcc9d4882677313e5cd84382595a",
+        "rev": "c1aaf4442a09e3558c3d152a9fe8d4b57f9976f4",
         "type": "github"
       },
       "original": {
         "owner": "pythoneda-shared-pythoneda-def",
-        "ref": "0.0.21",
+        "ref": "0.0.22",
         "repo": "domain",
         "type": "github"
       }
     },
     "root": {
       "inputs": {
+        "esdbclient": "esdbclient",
         "flake-utils": "flake-utils",
         "nixos": "nixos",
         "pythoneda-shared-pythoneda-banner": "pythoneda-shared-pythoneda-banner",
