@@ -11,11 +11,11 @@
       },
       "locked": {
         "dir": "esdbclient",
-        "lastModified": 1704916821,
-        "narHash": "sha256-hyojfile5zbJMmKs7Egq2m9cmuRdZuq6j4qQ9mN5y7s=",
+        "lastModified": 1705227856,
+        "narHash": "sha256-mu3F53Bj7HAz8MOMCgtIgQ7ko8A0LG0MArCNqWbPHaM=",
         "owner": "rydnr",
         "repo": "nix-flakes",
-        "rev": "20cb6c228e12a689c0fc9776b7aecb8b4528fbbe",
+        "rev": "783f471d5fd80d558483b16a48499ce2ecb024ad",
         "type": "github"
       },
       "original": {
