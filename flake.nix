@@ -29,14 +29,14 @@
     pythoneda-shared-banner = {
       inputs.flake-utils.follows = "flake-utils";
       inputs.nixos.follows = "nixos";
-      url = "github:pythoneda-shared-def/banner/0.0.42";
+      url = "github:pythoneda-shared-def/banner/0.0.43";
     };
     pythoneda-shared-domain = {
       inputs.flake-utils.follows = "flake-utils";
       inputs.nixos.follows = "nixos";
       inputs.pythoneda-shared-banner.follows =
         "pythoneda-shared-banner";
-      url = "github:pythoneda-shared-def/domain/0.0.24";
+      url = "github:pythoneda-shared-def/domain/0.0.25";
     };
   };
   outputs = inputs:
@@ -45,8 +45,8 @@
       let
         org = "pythoneda-shared";
         repo = "infrastructure";
-        version = "0.0.15";
-        sha256 = "00iv9sz3sw0c55awc828wc24lqvwmpgca6qwhrkc5xzz8hl0583k";
+        version = "0.0.16";
+        sha256 = "0dalrxgyln3zlflnkf70fcc1cwbyfnb5mvq5fygh0flil6969q2m";
         pname = "${org}-${repo}";
         pythonpackage = "pythoneda.infrastructure";
         pkgs = import nixos { inherit system; };
