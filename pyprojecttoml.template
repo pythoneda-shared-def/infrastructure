@@ -1,8 +1,8 @@
 # domain/pyprojecttoml.template
 #
-# This file is the template for pythoneda-shared/infrastructure's pyproject.toml
+# This file is the template for pythoneda-shared-pythonlang/infrastructure's pyproject.toml
 #
-# Copyright (C) 2023-today rydnr's pythoneda-shared/infrastructure-artifact
+# Copyright (C) 2023-today rydnr's pythoneda-shared-pythonlang-def/infrastructure
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -30,7 +30,7 @@ dbus-next = "^@dbusNextVersion@"
 esdbclient = "^@esdbclient@"
 grpcio = "^@grpcioVersion@"
 python = "^@pythonMajorMinorVersion@"
-pythoneda-shared-domain = "^@pythonedaSharedDomainVersion@"
+pythoneda-shared-pythonlang-domain = "^@pythonedaSharedPythonlangDomainVersion@"
 requests = "^@requestsVersion@"
 
 [build-system]
