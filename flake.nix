@@ -22,7 +22,7 @@
     esdbclient = {
       inputs.flake-utils.follows = "flake-utils";
       inputs.nixos.follows = "nixos";
-      url = "github:rydnr/nix-flakes/esdbclient-1.1.3?dir=esdbclient";
+      url = "github:rydnr/nix-flakes/esdbclient-1.1.3";
     };
     flake-utils.url = "github:numtide/flake-utils/v1.0.0";
     nixos.url = "github:NixOS/nixpkgs/24.05";

@@ -2,15 +2,23 @@
   "nodes": {
     "esdbclient": {
       "inputs": {
+        "exceptiongroup": "exceptiongroup",
         "flake-utils": [
           "flake-utils"
         ],
+        "flit": "flit",
+        "flit-scm": "flit-scm",
+        "hatchling": "hatchling",
         "nixos": [
           "nixos"
-        ]
+        ],
+        "overrides": "overrides",
+        "pluggy": "pluggy",
+        "pympler": "pympler",
+        "tomli": "tomli_2",
+        "trove-classifiers": "trove-classifiers"
       },
       "locked": {
-        "dir": "esdbclient",
         "lastModified": 1731731825,
         "narHash": "sha256-kOddDyUkMJEJm14yCbfW+DYceAzo/QRD8KDf92IcJJo=",
         "owner": "rydnr",
@@ -19,11 +27,40 @@
         "type": "github"
       },
       "original": {
-        "dir": "esdbclient",
         "owner": "rydnr",
         "ref": "esdbclient-1.1.3",
         "repo": "nix-flakes",
         "type": "github"
+      }
+    },
+    "exceptiongroup": {
+      "inputs": {
+        "flake-utils": [
+          "esdbclient",
+          "flake-utils"
+        ],
+        "flit": [
+          "esdbclient",
+          "flit"
+        ],
+        "flit-scm": [
+          "esdbclient",
+          "flit-scm"
+        ],
+        "nixos": [
+          "esdbclient",
+          "nixos"
+        ]
+      },
+      "locked": {
+        "lastModified": 1,
+        "narHash": "sha256-Lc6SznRXtYzvz4U+UKyUQv9Wl/TW1ag0ICSgAIgSt2M=",
+        "path": "./exceptiongroup",
+        "type": "path"
+      },
+      "original": {
+        "path": "./exceptiongroup",
+        "type": "path"
       }
     },
     "flake-utils": {
@@ -42,6 +79,85 @@
         "type": "github"
       }
     },
+    "flit": {
+      "inputs": {
+        "flake-utils": [
+          "esdbclient",
+          "flake-utils"
+        ],
+        "nixos": [
+          "esdbclient",
+          "nixos"
+        ],
+        "trove-classifiers": [
+          "esdbclient",
+          "trove-classifiers"
+        ]
+      },
+      "locked": {
+        "lastModified": 1,
+        "narHash": "sha256-bOi1QXteyhSXZLgeoAgmUql3sYJoUtoDmaikGDufS2U=",
+        "path": "./flit",
+        "type": "path"
+      },
+      "original": {
+        "path": "./flit",
+        "type": "path"
+      }
+    },
+    "flit-scm": {
+      "inputs": {
+        "flake-utils": [
+          "esdbclient",
+          "flake-utils"
+        ],
+        "flit": [
+          "esdbclient",
+          "flit"
+        ],
+        "nixos": [
+          "esdbclient",
+          "nixos"
+        ],
+        "tomli": "tomli"
+      },
+      "locked": {
+        "lastModified": 1,
+        "narHash": "sha256-OPwrHLvqB001FCmgn/H8Mlbnytj5vDyDf+/Fr/61kd4=",
+        "path": "./flit-scm",
+        "type": "path"
+      },
+      "original": {
+        "path": "./flit-scm",
+        "type": "path"
+      }
+    },
+    "hatchling": {
+      "inputs": {
+        "flake-utils": [
+          "esdbclient",
+          "flake-utils"
+        ],
+        "nixos": [
+          "esdbclient",
+          "nixos"
+        ],
+        "trove-classifiers": [
+          "esdbclient",
+          "trove-classifiers"
+        ]
+      },
+      "locked": {
+        "lastModified": 1,
+        "narHash": "sha256-PNtYNMNgmevM8SoDH/mAst1WmJzZIN3VdkF4phAN7cg=",
+        "path": "./hatchling",
+        "type": "path"
+      },
+      "original": {
+        "path": "./hatchling",
+        "type": "path"
+      }
+    },
     "nixos": {
       "locked": {
         "lastModified": 1717179513,
@@ -56,6 +172,72 @@
         "ref": "24.05",
         "repo": "nixpkgs",
         "type": "github"
+      }
+    },
+    "overrides": {
+      "inputs": {
+        "flake-utils": [
+          "esdbclient",
+          "flake-utils"
+        ],
+        "nixos": [
+          "esdbclient",
+          "nixos"
+        ]
+      },
+      "locked": {
+        "lastModified": 1,
+        "narHash": "sha256-cB0NCQz7LNQb02UWMoXSP0mVaYm0mLfa7dSr+78WduM=",
+        "path": "./overrides",
+        "type": "path"
+      },
+      "original": {
+        "path": "./overrides",
+        "type": "path"
+      }
+    },
+    "pluggy": {
+      "inputs": {
+        "flake-utils": [
+          "esdbclient",
+          "flake-utils"
+        ],
+        "nixos": [
+          "esdbclient",
+          "nixos"
+        ]
+      },
+      "locked": {
+        "lastModified": 1,
+        "narHash": "sha256-3EluuYLqjvWWhrHPtwux0vES+vrIobsXuQvLIawvcYQ=",
+        "path": "./pluggy",
+        "type": "path"
+      },
+      "original": {
+        "path": "./pluggy",
+        "type": "path"
+      }
+    },
+    "pympler": {
+      "inputs": {
+        "flake-utils": [
+          "esdbclient",
+          "flake-utils"
+        ],
+        "nixos": [
+          "esdbclient",
+          "nixos"
+        ]
+      },
+      "locked": {
+        "lastModified": 1,
+        "narHash": "sha256-tZpAnz7OWw7pSLtLbaemV+XftuEOkVo9dZAC3jjCy64=",
+        "path": "./pympler",
+        "type": "path"
+      },
+      "original": {
+        "path": "./pympler",
+        "type": "path"
       }
     },
     "pythoneda-shared-pythonlang-banner": {
@@ -116,6 +298,83 @@
         "nixos": "nixos",
         "pythoneda-shared-pythonlang-banner": "pythoneda-shared-pythonlang-banner",
         "pythoneda-shared-pythonlang-domain": "pythoneda-shared-pythonlang-domain"
+      }
+    },
+    "tomli": {
+      "inputs": {
+        "flake-utils": [
+          "esdbclient",
+          "flit-scm",
+          "flake-utils"
+        ],
+        "flit": [
+          "esdbclient",
+          "flit-scm",
+          "flit"
+        ],
+        "nixos": [
+          "esdbclient",
+          "flit-scm",
+          "nixos"
+        ]
+      },
+      "locked": {
+        "lastModified": 1,
+        "narHash": "sha256-sv4qQXos6b0EVNOSP9xfX4milwskdCkvpgwCknMBaJs=",
+        "path": "../tomli",
+        "type": "path"
+      },
+      "original": {
+        "path": "../tomli",
+        "type": "path"
+      }
+    },
+    "tomli_2": {
+      "inputs": {
+        "flake-utils": [
+          "esdbclient",
+          "flake-utils"
+        ],
+        "flit": [
+          "esdbclient",
+          "flit"
+        ],
+        "nixos": [
+          "esdbclient",
+          "nixos"
+        ]
+      },
+      "locked": {
+        "lastModified": 1,
+        "narHash": "sha256-pTEvPFPqc+vbLVxIKCiUabR17cyDZaO0o1LSLigEytk=",
+        "path": "./tomli",
+        "type": "path"
+      },
+      "original": {
+        "path": "./tomli",
+        "type": "path"
+      }
+    },
+    "trove-classifiers": {
+      "inputs": {
+        "flake-utils": [
+          "esdbclient",
+          "flake-utils"
+        ],
+        "nixos": [
+          "esdbclient",
+          "nixos"
+        ]
+      },
+      "locked": {
+        "lastModified": 1,
+        "narHash": "sha256-Kd+sAwrZXz54ST/jxNGGrfvijrfJGuro4o0oIl7SZKs=",
+        "path": "./trove-classifiers",
+        "type": "path"
+      },
+      "original": {
+        "path": "./trove-classifiers",
+        "type": "path"
       }
     }
   },
