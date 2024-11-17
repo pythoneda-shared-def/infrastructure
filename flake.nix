@@ -22,7 +22,7 @@
     esdbclient = {
       inputs.flake-utils.follows = "flake-utils";
       inputs.nixos.follows = "nixos";
-      url = "github:rydnr/nix-flakes/esdbclient-1.1.3?dir=esdbclient";
+      url = "github:rydnr/nix-flakes/0.1.17?dir=esdbclient";
     };
     flake-utils.url = "github:numtide/flake-utils/v1.0.0";
     nixos.url = "github:NixOS/nixpkgs/24.05";
@@ -36,7 +36,7 @@
       inputs.nixos.follows = "nixos";
       inputs.pythoneda-shared-pythonlang-banner.follows =
         "pythoneda-shared-pythonlang-banner";
-      url = "github:pythoneda-shared-pythonlang-def/domain/0.0.70";
+      url = "github:pythoneda-shared-pythonlang-def/domain/0.0.71";
     };
   };
   outputs = inputs:
