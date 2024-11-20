@@ -29,14 +29,14 @@
     pythoneda-shared-pythonlang-banner = {
       inputs.flake-utils.follows = "flake-utils";
       inputs.nixos.follows = "nixos";
-      url = "github:pythoneda-shared-pythonlang-def/banner/0.0.62";
+      url = "github:pythoneda-shared-pythonlang-def/banner/0.0.63";
     };
     pythoneda-shared-pythonlang-domain = {
       inputs.flake-utils.follows = "flake-utils";
       inputs.nixos.follows = "nixos";
       inputs.pythoneda-shared-pythonlang-banner.follows =
         "pythoneda-shared-pythonlang-banner";
-      url = "github:pythoneda-shared-pythonlang-def/domain/0.0.76";
+      url = "github:pythoneda-shared-pythonlang-def/domain/0.0.77";
     };
   };
   outputs = inputs:
@@ -136,9 +136,7 @@
       in rec {
         defaultPackage = packages.default;
         devShells = rec {
-          default = pythoneda-shared-pythonlang-infrastructure-default;
-          pythoneda-shared-pythonlang-infrastructure-default =
-            pythoneda-shared-pythonlang-infrastructure-python312;
+          default = pythoneda-shared-pythonlang-infrastructure-python312;
           pythoneda-shared-pythonlang-infrastructure-python38 =
             shared.devShell-for {
               banner = "${
@@ -221,9 +219,7 @@
             };
         };
         packages = rec {
-          default = pythoneda-shared-pythonlang-infrastructure-default;
-          pythoneda-shared-pythonlang-infrastructure-default =
-            pythoneda-shared-pythonlang-infrastructure-python312;
+          default = pythoneda-shared-pythonlang-infrastructure-python312;
           pythoneda-shared-pythonlang-infrastructure-python38 =
             pythoneda-shared-pythonlang-infrastructure-for {
               esdbclient = esdbclient.packages.${system}.esdbclient-python38;
