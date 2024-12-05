@@ -36,7 +36,7 @@
       inputs.nixos.follows = "nixos";
       inputs.pythoneda-shared-pythonlang-banner.follows =
         "pythoneda-shared-pythonlang-banner";
-      url = "github:pythoneda-shared-pythonlang-def/domain/0.0.92";
+      url = "github:pythoneda-shared-pythonlang-def/domain/0.0.93";
     };
   };
   outputs = inputs:
@@ -45,8 +45,8 @@
       let
         org = "pythoneda-shared-pythonlang";
         repo = "infrastructure";
-        version = "0.0.26";
-        sha256 = "13g8qk0rg22xfvl6fmdgfh7r3mb6pk9hsnhglfwvr59iwq9prwsy";
+        version = "0.0.27";
+        sha256 = "1mgjv007n23qghgjcf73wq2n3di7kaghw4galmb9qiz47ksgr6i6";
         pname = "${org}-${repo}";
         pythonpackage = "pythoneda.shared.infrastructure";
         pkgs = import nixos { inherit system; };
