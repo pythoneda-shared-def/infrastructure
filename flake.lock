@@ -5,21 +5,23 @@
         "flake-utils": [
           "flake-utils"
         ],
-        "nixos": "nixos"
+        "nixpkgs": [
+          "nixpkgs"
+        ]
       },
       "locked": {
         "dir": "esdbclient",
-        "lastModified": 1732904626,
-        "narHash": "sha256-SkDczDCF3mXWHsDAL0KVCpA4MjLvQ/1qrL0f4WdFiVo=",
+        "lastModified": 1733507692,
+        "narHash": "sha256-IBPBdUFCp/HAlg/LMHlf5yW9SILoyEota9r14C1983w=",
         "owner": "rydnr",
         "repo": "nix-flakes",
-        "rev": "4c0d3c1f6b41ef03f7e8437b67041542b641599d",
+        "rev": "d810b75bee44f2049a1769d99493636d7e631632",
         "type": "github"
       },
       "original": {
         "dir": "esdbclient",
         "owner": "rydnr",
-        "ref": "esdbclient-1.1.3.0",
+        "ref": "esdbclient-1.1.3.1",
         "repo": "nix-flakes",
         "type": "github"
       }
@@ -37,22 +39,6 @@
         "owner": "numtide",
         "ref": "v1.0.0",
         "repo": "flake-utils",
-        "type": "github"
-      }
-    },
-    "nixos": {
-      "locked": {
-        "lastModified": 1717179513,
-        "narHash": "sha256-vboIEwIQojofItm2xGCdZCzW96U85l9nDW3ifMuAIdM=",
-        "owner": "NixOS",
-        "repo": "nixpkgs",
-        "rev": "63dacb46bf939521bdc93981b4cbb7ecb58427a0",
-        "type": "github"
-      },
-      "original": {
-        "owner": "NixOS",
-        "ref": "24.05",
-        "repo": "nixpkgs",
         "type": "github"
       }
     },

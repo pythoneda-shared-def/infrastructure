@@ -22,7 +22,7 @@
     esdbclient = {
       inputs.flake-utils.follows = "flake-utils";
       inputs.nixpkgs.follows = "nixpkgs";
-      url = "github:rydnr/nix-flakes/esdbclient-1.1.3.0?dir=esdbclient";
+      url = "github:rydnr/nix-flakes/esdbclient-1.1.3.1?dir=esdbclient";
     };
     flake-utils.url = "github:numtide/flake-utils/v1.0.0";
     nixpkgs.url = "github:NixOS/nixpkgs/24.05";
@@ -49,6 +49,7 @@
         sha256 = "0pfzsf7mvbk3fim66h065nr7ff86ldbnb3yj625dg03y6lib6vd5";
         pname = "${org}-${repo}";
         pythonpackage = "pythoneda.shared.infrastructure";
+        package = builtins.replaceStrings [ "." ] [ "/" ] pythonpackage;
         pkgs = import nixpkgs { inherit system; };
         description = "Shared kernel for infrastructure layers";
         license = pkgs.lib.licenses.gpl3;
