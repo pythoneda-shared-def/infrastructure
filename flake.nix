@@ -82,7 +82,7 @@
               dbusNextVersion = python.pkgs.dbus-next.version;
               desc = description;
               esdbclient = esdbclient.version;
-              inherit homepage pname pythonMajorMinorVersion pythonpackage
+              inherit homepage pname pythonMajorMinorVersion package
                 version;
               grpcioVersion = python.pkgs.grpcio.version;
               package = builtins.replaceStrings [ "." ] [ "/" ] pythonpackage;
