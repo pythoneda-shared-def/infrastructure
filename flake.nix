@@ -85,7 +85,6 @@
               inherit homepage pname pythonMajorMinorVersion package
                 version;
               grpcioVersion = python.pkgs.grpcio.version;
-              package = builtins.replaceStrings [ "." ] [ "/" ] pythonpackage;
               pythonedaSharedPythonlangDomainVersion =
                 pythoneda-shared-pythonlang-domain.version;
               requestsVersion = python.pkgs.requests.version;
